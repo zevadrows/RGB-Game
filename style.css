@@ -1,0 +1,41 @@
+body {
+    background: #232323;
+}
+
+.square {
+    width: 30%;
+    margin: 1.66%;
+    background: purple;
+    padding-bottom: 30%;
+    float: left;
+    border-radius: 10%;
+}
+
+#container {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+div h3 {
+    font-weight: 200;
+    padding-top: 10px; 
+}
+div h2 {
+    line-height: 30px;
+    font-weight: 300;
+    font-size: 3.5em
+}
+#header {
+    margin-bottom: 0;
+}
+
+.difficulty-bar {
+    font-weight: 500;    
+}
+
+.diff-active {
+    background: #007BFF;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: #F8F9FA;
+}

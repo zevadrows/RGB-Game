@@ -1,6 +1,6 @@
 var rgbDisplay = document.querySelector("#rgbDisplay");
 var header = document.getElementById("header");
-
+var newColBtn = document.querySelector("#newColorsButton")
 
 
 
@@ -22,6 +22,12 @@ rgbDisplay.textContent = color;
 
 
 function newColor(rgb){
-    rgb = "rgb"+colorGenerate;
-    header.style.backgroundColor = rgb;    
+    header.style.backgroundColor = "rgb"+color;
 }
+
+newColor();
+
+newColBtn.addEventListener("click", function(){
+    colorGenerate();
+    newColor();
+});

@@ -16,18 +16,14 @@ function colorGenerate(){
     return "("+rgbGenerator()+", "+rgbGenerator()+", "+rgbGenerator()+")"
 };
 
-var color = colorGenerate();
-
-rgbDisplay.textContent = color;
-
-
 function newColor(rgb){
+    var color = colorGenerate();
     header.style.backgroundColor = "rgb"+color;
+    rgbDisplay.textContent = color;
 }
 
 newColor();
 
 newColBtn.addEventListener("click", function(){
-    colorGenerate();
     newColor();
 });

@@ -7,8 +7,7 @@ var newColBtn = document.querySelector("#newColorsButton")
 function rgbGenerator() {
     var min=0; 
     var max=255;  
-    var random =Math.floor(Math.random() * (+max - +min)) + +min; 
-    document.write("Random Number Generated : " + random ); 
+    var random =Math.floor(Math.random() * (+max - +min)) + +min;
     return random;
 }
 

@@ -1,6 +1,7 @@
 var rgbDisplay = document.querySelector("#rgbDisplay");
 var header = document.getElementById("header");
-var newColBtn = document.querySelector("#newColorsButton")
+var newColorBtn = document.querySelector("#newColorsButton");
+var activeDiff = document.querySelector(".diff-active");
 
 
 
@@ -15,14 +16,21 @@ function colorGenerate(){
     return "("+rgbGenerator()+", "+rgbGenerator()+", "+rgbGenerator()+")"
 };
 
-function newColor(rgb){
+function newColor(){
     var color = colorGenerate();
     header.style.backgroundColor = "rgb"+color;
     rgbDisplay.textContent = color;
+    //esse comando não tá funcionando:
+    // active.style.backgroundColor = "rgb"+color;
+    
+    
 }
 
 newColor();
 
-newColBtn.addEventListener("click", function(){
+newColorBtn.addEventListener("click", function(){
     newColor();
+});
+newColorBtn.addEventListener("mouseOver", function(){
+
 });

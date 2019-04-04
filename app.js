@@ -2,6 +2,7 @@ var rgbDisplay = document.querySelector("#rgbDisplay");
 var header = document.getElementById("header");
 var newColorBtn = document.querySelector("#newColorsButton");
 var activeDiff = document.querySelector(".diff-active");
+var squares = document.querySelectorAll(".square");
 
 
 
@@ -16,13 +17,18 @@ function colorGenerate(){
     return "("+rgbGenerator()+", "+rgbGenerator()+", "+rgbGenerator()+")"
 };
 
+function randomSquares(){
+    for (var i = 0; i<squares.length; i++){
+        squares[i].style.backgroundColor = "rgb"+colorGenerate();
+    }
+};
+
 function newColor(){
     var color = colorGenerate();
     header.style.backgroundColor = "rgb"+color;
     rgbDisplay.textContent = color;
-    //esse comando não tá funcionando:
-    // active.style.backgroundColor = "rgb"+color;
-    
+    activeDiff.style.backgroundColor = "rgb"+color;
+    randomSquares();
     
 }
 

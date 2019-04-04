@@ -13,6 +13,13 @@ function rgbGenerator() {
     return random;
 }
 
+function randomNumber6(){
+    var min=0; 
+    var max=5;  
+    var random =Math.floor(Math.random() * (+max - +min)) + +min;
+    return random;
+};
+
 function colorGenerate(){
     return "("+rgbGenerator()+", "+rgbGenerator()+", "+rgbGenerator()+")"
 };
@@ -24,12 +31,26 @@ function randomSquares(){
 };
 
 function newColor(){
-    var color = colorGenerate();
-    header.style.backgroundColor = "rgb"+color;
+    var color = colorGenerate();  
     rgbDisplay.textContent = color;
-    activeDiff.style.backgroundColor = "rgb"+color;
+    //take out this code later
+    //activeDiff.style.backgroundColor = "rgb"+color;
     randomSquares();
-    
+    var randNum = randomNumber6();
+    var rightSquare = squares[randNum];
+    rightSquare.style.backgroundColor = "rgb"+color;
+    for (var i = 0; i<squares.length; i++){
+        if (squares[i] == rightSquare){
+            squares[i].addEventListener("click", function(){
+                rgbDisplay.textContent = "SUCCESS";
+            });
+        }
+        else {
+            squares[i].addEventListener("click", function(){
+                rgbDisplay.textContent = "NOT!!!";
+            });
+        }
+    }
 }
 
 newColor();
@@ -37,6 +58,6 @@ newColor();
 newColorBtn.addEventListener("click", function(){
     newColor();
 });
-newColorBtn.addEventListener("mouseOver", function(){
 
-});
+
+

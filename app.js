@@ -50,7 +50,9 @@ function newColor() {
         }
         else {
             squares[i].addEventListener("click", function () {
-                
+                //trying to make wrong  square[i] disappear
+                //squares[i].style.opacity = "0";
+
                 rgbDisplay.textContent = "WRONG!!!";
             });
         }

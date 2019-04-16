@@ -49,3 +49,6 @@ div h2 {
 .difficulty-bar span {
     cursor: pointer;
 }
+.user-cursor {
+    cursor: default;
+}

@@ -3,6 +3,7 @@ var header = document.getElementById("header");
 var newColorBtn = document.querySelector("#newColorsButton");
 var activeDiff = document.querySelector(".diff-active");
 var squares = document.querySelectorAll(".square");
+var resultDisplay = document.querySelector("#resultDisplay");
 
 
 
@@ -49,8 +50,8 @@ function setDifficulty() {
             easyBtn.classList.add("diff-active");
             hardBtn.classList.remove("diff-active");
             difficultyEasy = true;
-            squares = document.querySelectorAll(".square");            
-            for (var i = 0; i < hardSquares.length; i++){
+            squares = document.querySelectorAll(".square");
+            for (var i = 0; i < hardSquares.length; i++) {
                 hardSquares[i].style.opacity = "0";
                 hardSquares[i].style.cursor = "default";
             }
@@ -63,9 +64,9 @@ function setDifficulty() {
             easyBtn.classList.remove("diff-active");
             difficultyEasy = false;
             squares = document.querySelectorAll(".square-easy");
-            for (var i = 0; i < hardSquares.length; i++){
+            for (var i = 0; i < hardSquares.length; i++) {
                 hardSquares[i].style.opacity = "1";
-                hardSquares[i].style.cursor = "pointer";               
+                hardSquares[i].style.cursor = "pointer";
             }
             newColor();
         });
@@ -74,6 +75,8 @@ function setDifficulty() {
 
 //game
 function newColor() {
+    resultDisplay.textContent = "";
+    header.classList.add("bg-primary");
     setDifficulty();
     var color = colorGenerate();
     rgbDisplay.textContent = color;
@@ -90,15 +93,18 @@ function newColor() {
                         squares[i].style.backgroundColor = rightSquare.style.backgroundColor;
                     }
                     */
-                    rgbDisplay.textContent = "SUCCESS";
+                    header.classList.remove("bg-primary");
+                    header.style.backgroundColor = "rgb" + color;
+                    resultDisplay.textContent = "RIGHT!!!";
                 });
             }
             else {
                 squares[i].addEventListener("click", function () {
                     //trying to make wrong  square[i] disappear
                     //squares[i].style.opacity = "0";
-
-                    rgbDisplay.textContent = "WRONG!!!";
+                    header.classList.remove("bg-primary");
+                    header.style.backgroundColor = "red";
+                    resultDisplay.textContent = "WRONG. TRY AGAIN.";
                 });
             }
         }
@@ -115,7 +121,9 @@ function newColor() {
                         squares[i].style.backgroundColor = rightSquare.style.backgroundColor;
                     }
                     */
-                    rgbDisplay.textContent = "SUCCESS";
+                    header.classList.remove("bg-primary");
+                    header.style.backgroundColor = "rgb" + color;
+                    resultDisplay.textContent = "RIGHT!!!";
                 });
             }
             else {
@@ -123,7 +131,9 @@ function newColor() {
                     //trying to make wrong  square[i] disappear
                     //squares[i].style.opacity = "0";
 
-                    rgbDisplay.textContent = "WRONG!!!";
+                    header.classList.remove("bg-primary");
+                    header.style.backgroundColor = "red";
+                    resultDisplay.textContent = "WRONG. TRY AGAIN.";
                 });
             }
         }

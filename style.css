@@ -29,6 +29,7 @@ div h2 {
 }
 #header {
     margin-bottom: 0;
+    transition-duration: 1s;
 }
 
 .difficulty-bar {
@@ -51,4 +52,11 @@ div h2 {
 }
 .user-cursor {
     cursor: default;
+}
+
+#rgbDisplay {
+    transition-duration: 1s;
+}
+#resultDisplay {
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
 }

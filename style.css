@@ -10,6 +10,7 @@ body {
     float: left;
     border-radius: 10%;
     cursor: pointer;
+    transition-duration: 1s
 }
 
 #container {

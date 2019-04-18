@@ -13,7 +13,7 @@ body {
     transition-duration: 1s;
 }
 
-#container {
+#squares-div {
     margin: 0 auto;
     max-width: 600px;
 }
@@ -38,7 +38,7 @@ div h2 {
 
 .diff-active {
     background-color: #007BFF;
-    padding-top: 2px;
+    padding-top: 1px;
     padding-bottom: 2px;
     color: #F8F9FA;
 }

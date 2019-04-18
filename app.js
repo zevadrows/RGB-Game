@@ -88,11 +88,6 @@ function newColor() {
         for (var i = 0; i < squares.length; i++) {
             if (squares[i] == rightSquare) {
                 squares[i].addEventListener("click", function () {
-                    /* Trying to make every square turn into rightSquare color
-                    for (var i = 0; i < squares.length; i++) {
-                        squares[i].style.backgroundColor = rightSquare.style.backgroundColor;
-                    }
-                    */
                     header.classList.remove("bg-primary");
                     header.style.backgroundColor = "rgb" + color;
                     resultDisplay.textContent = "RIGHT!!!";
@@ -100,8 +95,6 @@ function newColor() {
             }
             else {
                 squares[i].addEventListener("click", function () {
-                    //trying to make wrong  square[i] disappear
-                    //squares[i].style.opacity = "0";
                     header.classList.remove("bg-primary");
                     header.style.backgroundColor = "red";
                     resultDisplay.textContent = "WRONG. TRY AGAIN.";
@@ -116,11 +109,6 @@ function newColor() {
         for (var i = 0; i < squares.length; i++) {
             if (squares[i] == rightSquare) {
                 squares[i].addEventListener("click", function () {
-                    /* Trying to make every square turn into rightSquare color
-                    for (var i = 0; i < squares.length; i++) {
-                        squares[i].style.backgroundColor = rightSquare.style.backgroundColor;
-                    }
-                    */
                     header.classList.remove("bg-primary");
                     header.style.backgroundColor = "rgb" + color;
                     resultDisplay.textContent = "RIGHT!!!";
@@ -128,9 +116,6 @@ function newColor() {
             }
             else {
                 squares[i].addEventListener("click", function () {
-                    //trying to make wrong  square[i] disappear
-                    //squares[i].style.opacity = "0";
-
                     header.classList.remove("bg-primary");
                     header.style.backgroundColor = "red";
                     resultDisplay.textContent = "WRONG. TRY AGAIN.";
